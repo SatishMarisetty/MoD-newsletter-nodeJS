@@ -40,7 +40,7 @@ app.post('/', function(req,res){
             res.sendFile(path.join(__dirname,'frontend/failed-page.html'));
         }
         response.on('data',function(data){
-            console.log(JSON.parse(data.toString()));
+            console.log(data.toString());
         });
     });
     mailchimp.write(JSON.stringify(input));
